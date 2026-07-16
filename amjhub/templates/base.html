@@ -1,0 +1,139 @@
+{{define "base"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="{{block "description" .}}AMJ HUB — Professional Cinematography, Photography, Videography & Drone Services. We transform moments into timeless visual stories through cinematic excellence.{{end}}" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta property="og:title" content="{{block "ogtitle" .}}AMJ HUB | Cinematic Visual Storytelling{{end}}" />
+  <meta property="og:description" content="{{block "ogdesc" .}}Professional Photography, Videography, Drone Services & Visual Content Production.{{end}}" />
+  <meta property="og:type" content="website" />
+  <title>{{block "title" .}}AMJ HUB | Cinematic Visual Storytelling{{end}}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="/static/css/portfolio.css" />
+  {{block "extrahead" .}}{{end}}
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="AMJ HUB Home">
+        <span class="nav-logo-main">AMJ<span>HUB</span></span>
+        <span class="nav-logo-sub">Visual Storytelling</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/work"{{if eq .ActiveNav "portfolio"}} class="active"{{end}}>Our Work</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/#contact" class="btn btn-outline">Get a Quote</a>
+        <a href="/#contact" class="btn btn-primary">Book a Shoot</a>
+      </div>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-mobile" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <ul role="list">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/work">Our Work</a></li>
+      <li><a href="/#gallery">Gallery</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <a href="/#contact" class="btn btn-primary">Book Your Shoot Today</a>
+  </div>
+
+  {{template "content" .}}
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo">AMJ<span>HUB</span></div>
+          <div class="footer-tagline">Crafting Legacies, Frame by Frame.</div>
+          <p class="footer-desc">
+            AMJ HUB is a full-service visual production studio delivering premium
+            cinematography, photography, aerial videography, and creative content
+            solutions for brands and individuals across Nigeria and beyond.
+          </p>
+          <div class="footer-social">
+            <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="footer-social-link">IG</a>
+            <a href="https://x.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" class="footer-social-link">𝕏</a>
+            <a href="https://youtube.com/@YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="footer-social-link">YT</a>
+            <a href="https://tiktok.com/@YOUR_USERNAME" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="footer-social-link">TT</a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Services">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="/#services">Professional Photography</a></li>
+            <li><a href="/#services">Cinematic Videography</a></li>
+            <li><a href="/#services">Drone &amp; Aerial Services</a></li>
+            <li><a href="/#services">Music Video Production</a></li>
+            <li><a href="/#services">Event Coverage</a></li>
+            <li><a href="/#services">Video Editing</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Company">
+          <h4>Company</h4>
+          <ul role="list">
+            <li><a href="/#about">About AMJ HUB</a></li>
+            <li><a href="/work">Our Work</a></li>
+            <li><a href="/#gallery">Gallery</a></li>
+            <li><a href="/#contact">Book a Shoot</a></li>
+            <li><a href="/#contact">Get a Free Quote</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul role="list">
+            <li><a href="mailto:info@amjhub.com">info@amjhub.com</a></li>
+            <li><a href="tel:+2348000000000">+234 800 000 0000</a></li>
+            <li style="color: var(--color-muted); font-size: 0.875rem;">Lagos, Nigeria</li>
+            <li style="color: var(--color-muted); font-size: 0.875rem;">Mon – Sat: 8AM – 7PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> <strong>AMJ HUB</strong>. All rights reserved.
+          Crafted with passion for cinematic excellence.
+        </p>
+        <p class="footer-copy" style="font-style: italic; color: var(--color-gold);">
+          "Every frame tells a story."
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="/static/js/main.js"></script>
+  {{block "extrascripts" .}}{{end}}
+
+</body>
+</html>
+{{end}}

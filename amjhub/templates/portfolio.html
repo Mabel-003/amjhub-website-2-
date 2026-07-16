@@ -1,0 +1,423 @@
+{{define "title"}}Our Work | AMJ HUB{{end}}
+{{define "description"}}AMJ HUB Portfolio — Browse our completed projects across photography, videography, drone, events, and brand production.{{end}}
+{{define "ogtitle"}}Our Work | AMJ HUB{{end}}
+{{define "ogdesc"}}Case studies and portfolio of AMJ HUB visual production projects.{{end}}
+{{define "extrascripts"}}<script src="/static/js/portfolio.js"></script>{{end}}
+
+{{define "content"}}
+
+  <!-- ═══════════════════════════════════════════
+       PAGE HERO — Portfolio Header
+  ═══════════════════════════════════════════ -->
+  <section class="page-hero" aria-labelledby="page-hero-title">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="container">
+      <div class="page-hero-content">
+        <p class="hero-label">Case Studies &amp; Featured Projects</p>
+        <h1 class="hero-headline" id="page-hero-title" style="font-size: clamp(2.4rem, 5vw, 4.5rem);">
+          Our Work<br />
+          <em>Speaks First.</em>
+        </h1>
+        <div class="hero-gold-rule" style="animation: expandRule 1s 0.5s forwards;"></div>
+        <p class="hero-subheadline">
+          Every project in our portfolio represents a story told with intentionality,
+          precision, and cinematic heart. Browse by category or explore everything we've
+          created for clients across Nigeria and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       PORTFOLIO FILTER + CASE STUDY GRID
+  ═══════════════════════════════════════════ -->
+  <section id="portfolio-grid" aria-labelledby="portfolio-title">
+    <div class="container">
+
+      <div class="portfolio-filter-bar reveal" role="tablist" aria-label="Portfolio categories">
+        <button class="gallery-filter active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+        <button class="gallery-filter" data-filter="photo" role="tab" aria-selected="false">Photography</button>
+        <button class="gallery-filter" data-filter="video" role="tab" aria-selected="false">Videography</button>
+        <button class="gallery-filter" data-filter="drone" role="tab" aria-selected="false">Drone &amp; Aerial</button>
+        <button class="gallery-filter" data-filter="event" role="tab" aria-selected="false">Events</button>
+        <button class="gallery-filter" data-filter="brand" role="tab" aria-selected="false">Brand &amp; Commercial</button>
+      </div>
+
+      <div class="portfolio-cards" id="portfolio-cards" aria-label="Portfolio projects">
+
+        <!-- PROJECT 1 — Wedding Film -->
+        <article class="portfolio-card reveal" data-category="video event" aria-label="Project: The Adebayo Wedding Film">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1511285560929-80b456503681?w=800&q=80&auto=format&fit=crop"
+              alt="Adebayo wedding — golden hour bride and groom portrait"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-play-btn" aria-label="View project">▶</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--video">Videography</span>
+              <span class="portfolio-badge portfolio-badge--event">Event</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">Adebayo &amp; Funmi</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">The Adebayo Wedding Film</h3>
+            <p class="portfolio-card-desc">
+              A cinematic full-day wedding film capturing the intimacy of the
+              traditional engagement, the grandeur of the church ceremony, and the
+              energy of a 400-guest Lagos reception — color-graded to a warm,
+              filmic palette that honours the couple's Yoruba heritage.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Cinematic Film</span>
+              <span class="service-tag">2-Camera Setup</span>
+              <span class="service-tag">Drone Footage</span>
+              <span class="service-tag">Same-Day Edit</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">14hr</span>
+                <span class="portfolio-result-label">Day Covered</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">400+</span>
+                <span class="portfolio-result-label">Guests</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">12min</span>
+                <span class="portfolio-result-label">Feature Film</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 — Brand Documentary -->
+        <article class="portfolio-card reveal reveal-delay-1" data-category="video brand" aria-label="Project: UrbanWear Brand Documentary">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop"
+              alt="Brand documentary shoot — fashion brand behind the scenes"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-play-btn" aria-label="View project">▶</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--video">Commercial</span>
+              <span class="portfolio-badge portfolio-badge--brand">Brand</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">UrbanWear Lagos</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">Origin Story — Brand Documentary</h3>
+            <p class="portfolio-card-desc">
+              A 4-minute brand origin documentary for one of Lagos's fastest-growing
+              streetwear labels, following the founder from market stalls to showroom
+              floors. Shot over 3 days across Victoria Island, Yaba, and Lekki.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Documentary</span>
+              <span class="service-tag">Interview Setup</span>
+              <span class="service-tag">B-Roll Production</span>
+              <span class="service-tag">Color Grading</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">3</span>
+                <span class="portfolio-result-label">Shoot Days</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">4min</span>
+                <span class="portfolio-result-label">Final Cut</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">85K</span>
+                <span class="portfolio-result-label">Views (IG)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 — Aerial Real Estate -->
+        <article class="portfolio-card reveal reveal-delay-2" data-category="drone brand photo" aria-label="Project: Lekki Towers Aerial Showcase">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1506765515384-028b60a970df?w=800&q=80&auto=format&fit=crop"
+              alt="Aerial drone photography — luxury residential development in Lagos"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-zoom-icon" aria-label="View project">⊕</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--drone">Drone</span>
+              <span class="portfolio-badge portfolio-badge--brand">Real Estate</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">Zenith Realty Group</span>
+              <span class="portfolio-year">2023</span>
+            </div>
+            <h3 class="portfolio-card-title">Lekki Towers — Aerial Showcase</h3>
+            <p class="portfolio-card-desc">
+              A comprehensive aerial photography and video package for a luxury
+              40-unit residential development. Deliverables included hero stills,
+              4K drone flyover footage, and a 90-second promotional reel for
+              investor presentations and off-plan sales marketing.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">4K Drone</span>
+              <span class="service-tag">Aerial Stills</span>
+              <span class="service-tag">Promo Reel</span>
+              <span class="service-tag">Twilight Shots</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">40</span>
+                <span class="portfolio-result-label">Units Marketed</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">4K</span>
+                <span class="portfolio-result-label">Resolution</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">60%</span>
+                <span class="portfolio-result-label">Faster Sales</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 — Corporate Event -->
+        <article class="portfolio-card reveal" data-category="event photo" aria-label="Project: TechNigeria Summit 2024">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80&auto=format&fit=crop"
+              alt="Corporate event photography — large conference hall with stage lighting"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-zoom-icon" aria-label="View project">⊕</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--event">Conference</span>
+              <span class="portfolio-badge portfolio-badge--photo">Photography</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">TechNigeria Foundation</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">TechNigeria Summit — Full Coverage</h3>
+            <p class="portfolio-card-desc">
+              Two-day full-coverage package for Nigeria's largest annual technology
+              summit with over 800 attendees. Scope included keynote photography,
+              panel session stills, executive portraits, networking event coverage,
+              and a same-day social media highlight reel.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Event Photography</span>
+              <span class="service-tag">Same-Day Edits</span>
+              <span class="service-tag">Executive Portraits</span>
+              <span class="service-tag">Multi-Day</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">800+</span>
+                <span class="portfolio-result-label">Attendees</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">2</span>
+                <span class="portfolio-result-label">Day Coverage</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">400+</span>
+                <span class="portfolio-result-label">Edited Stills</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 5 — Music Video -->
+        <article class="portfolio-card reveal reveal-delay-1" data-category="video brand" aria-label="Project: Afrobeats Music Video">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=800&q=80&auto=format&fit=crop"
+              alt="Music video production — artist performance shoot with creative lighting"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-play-btn" aria-label="View project">▶</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--video">Music Video</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">Confidential — Major Label</span>
+              <span class="portfolio-year">2024</span>
+            </div>
+            <h3 class="portfolio-card-title">Afrobeats Visual — "Àṣà" Single</h3>
+            <p class="portfolio-card-desc">
+              A high-energy, visually layered music video for an emerging Afrobeats
+              recording artist. Shot across 3 locations in Lagos with a 12-person
+              crew, featuring dynamic choreography sequences, narrative story
+              inserts, and a signature warm-teal color grade.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Music Video</span>
+              <span class="service-tag">Multi-Location</span>
+              <span class="service-tag">12-Person Crew</span>
+              <span class="service-tag">Color Grading</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">3</span>
+                <span class="portfolio-result-label">Locations</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">200K+</span>
+                <span class="portfolio-result-label">YouTube Views</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">1</span>
+                <span class="portfolio-result-label">Week Delivery</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 6 — Product & Lifestyle Photography -->
+        <article class="portfolio-card reveal reveal-delay-2" data-category="photo brand" aria-label="Project: Cosmetics Brand Campaign">
+          <div class="portfolio-card-media">
+            <img
+              src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80&auto=format&fit=crop"
+              alt="Lifestyle product photography — cosmetics and beauty brand shoot"
+              loading="lazy"
+            />
+            <div class="portfolio-card-overlay">
+              <div class="portfolio-zoom-icon" aria-label="View project">⊕</div>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge portfolio-badge--photo">Product</span>
+              <span class="portfolio-badge portfolio-badge--brand">Campaign</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">GlowLab Cosmetics</span>
+              <span class="portfolio-year">2023</span>
+            </div>
+            <h3 class="portfolio-card-title">GlowLab — Q4 Campaign Shoot</h3>
+            <p class="portfolio-card-desc">
+              A full-day studio and lifestyle shoot for a Nigerian cosmetics brand's
+              quarterly social media and e-commerce campaign. Delivered 60+
+              product stills, 12 lifestyle images with models, and 3 short-form
+              video reels ready for Instagram and TikTok.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Product Photography</span>
+              <span class="service-tag">Lifestyle</span>
+              <span class="service-tag">Social Reels</span>
+              <span class="service-tag">Studio Setup</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">60+</span>
+                <span class="portfolio-result-label">Product Stills</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">3</span>
+                <span class="portfolio-result-label">Video Reels</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">40%</span>
+                <span class="portfolio-result-label">Sales Uplift</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- PLACEHOLDER CARD -->
+        <article class="portfolio-card portfolio-card--placeholder reveal" data-category="photo" aria-label="Placeholder — upcoming project">
+          <div class="portfolio-card-media">
+            <div class="portfolio-placeholder-visual">
+              <div class="portfolio-placeholder-icon" aria-hidden="true">📷</div>
+              <span>Your Project Here</span>
+            </div>
+            <div class="portfolio-card-badges">
+              <span class="portfolio-badge" style="background: var(--color-border); color: var(--color-muted);">Photography</span>
+            </div>
+          </div>
+          <div class="portfolio-card-body">
+            <div class="portfolio-card-meta">
+              <span class="portfolio-client">Client Name</span>
+              <span class="portfolio-year">2025</span>
+            </div>
+            <h3 class="portfolio-card-title">Project Title Goes Here</h3>
+            <p class="portfolio-card-desc">
+              Replace this with a short paragraph describing the project scope,
+              what was delivered, and the outcome. Keep it to 2–3 sentences for
+              readability.
+            </p>
+            <div class="portfolio-card-tags">
+              <span class="service-tag">Tag One</span>
+              <span class="service-tag">Tag Two</span>
+            </div>
+            <div class="portfolio-results">
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">—</span>
+                <span class="portfolio-result-label">Metric</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">—</span>
+                <span class="portfolio-result-label">Metric</span>
+              </div>
+              <div class="portfolio-result-item">
+                <span class="portfolio-result-num">—</span>
+                <span class="portfolio-result-label">Metric</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.portfolio-cards -->
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CTA BAND
+  ═══════════════════════════════════════════ -->
+  <section class="portfolio-cta-band" aria-label="Book a project call to action">
+    <div class="container">
+      <div class="portfolio-cta-inner reveal">
+        <div class="portfolio-cta-text">
+          <span class="section-eyebrow">Ready to Create?</span>
+          <h2 class="section-title" style="margin-bottom: 0;">
+            Let's Add Your Story<br />
+            <em style="font-style:italic; color: var(--color-gold);">To This Page.</em>
+          </h2>
+        </div>
+        <div class="portfolio-cta-actions">
+          <a href="/#contact" class="btn btn-primary">Book Your Shoot Today →</a>
+          <a href="/#contact" class="btn btn-outline">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{end}}

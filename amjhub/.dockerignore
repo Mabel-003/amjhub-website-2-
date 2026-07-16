@@ -1,0 +1,10 @@
+.git
+.github
+.env
+.env.local
+amjhub-server
+*.exe
+*.log
+node_modules
+.DS_Store
+README.md

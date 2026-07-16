@@ -1,0 +1,13 @@
+# Environment variables — never commit real credentials
+.env
+.env.local
+.env.example
+
+
+# Compiled binaries
+amjhub-server
+*.exe
+
+# OS files
+.DS_Store
+Thumbs.db
