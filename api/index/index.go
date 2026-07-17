@@ -1,4 +1,4 @@
-package handler
+package index
 
 import (
 	"net/http"
@@ -20,8 +20,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	data := backend.PageData{ActiveNav: "portfolio"}
-	if err := backend.ExecutePortfolioTemplate(w, data); err != nil {
+	data := backend.PageData{ActiveNav: "home"}
+	if err := backend.ExecuteHomeTemplate(w, data); err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 	}
 }

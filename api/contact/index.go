@@ -1,4 +1,4 @@
-package handler
+package contact
 
 import (
 	"net/http"
