@@ -2,16 +2,9 @@ package work
 
 import (
 	"net/http"
-	"os"
 
 	"amjhub/backend"
 )
-
-func init() {
-	if err := backend.LoadTemplates(os.DirFS(".")); err != nil {
-		panic(err)
-	}
-}
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {

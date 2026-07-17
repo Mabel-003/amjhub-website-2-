@@ -1,6 +1,7 @@
 package backend
 
 import (
+	"embed"
 	"encoding/json"
 	"fmt"
 	"html/template"
@@ -13,6 +14,15 @@ import (
 	"strings"
 	"time"
 )
+
+//go:embed templates/*
+var templateFS embed.FS
+
+func init() {
+	if err := LoadTemplates(templateFS); err != nil {
+		panic(err)
+	}
+}
 
 type ContactFormData struct {
 	FullName  string
