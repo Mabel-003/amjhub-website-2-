@@ -1,12 +1,9 @@
 # Environment variables — never commit real credentials
 .env
 .env.local
-.env.example
-
 
 # Compiled binaries
 amjhub
-amjhub-server
 *.exe
 
 # OS files
