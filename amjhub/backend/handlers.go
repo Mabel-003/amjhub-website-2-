@@ -4,9 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"html/template"
+	"io"
 	"io/fs"
 	"log"
 	"net/http"
+	"os"
 	"regexp"
 	"strings"
 	"time"
@@ -181,4 +183,16 @@ func ifEmpty(s, fallback string) string {
 		return fallback
 	}
 	return s
+}
+
+func ExecuteHomeTemplate(w io.Writer, data PageData) error {
+	return homeTmpl.ExecuteTemplate(w, "base", data)
+}
+
+func ExecutePortfolioTemplate(w io.Writer, data PageData) error {
+	return portfolioTmpl.ExecuteTemplate(w, "base", data)
+}
+
+func LoadTemplatesFromDisk() error {
+	return LoadTemplates(os.DirFS("."))
 }

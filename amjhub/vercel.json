@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/api/index" },
+    { "source": "/work", "destination": "/api/work" },
+    { "source": "/portfolio", "destination": "/api/work" },
+    { "source": "/contact", "destination": "/api/contact" },
+    { "source": "/health", "destination": "/api/health" }
+  ]
+}
