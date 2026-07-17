@@ -11,7 +11,7 @@ import (
 	"amjhub/backend"
 )
 
-//go:embed templates/* static/*
+//go:embed static/*
 var embeddedAssets embed.FS
 
 func main() {
@@ -23,12 +23,7 @@ func main() {
 
 	mux := http.NewServeMux()
 
-	// Load templates from embedded assets (fallback to disk on error)
-	if err := backend.LoadTemplates(embeddedAssets); err != nil {
-		if err2 := backend.LoadTemplates(os.DirFS(".")); err2 != nil {
-			log.Fatalf("failed to load templates from embedded FS or disk: %v / %v", err, err2)
-		}
-	}
+	// Templates are auto-loaded via backend.init() from embedded assets.
 
 	// Serve static assets (CSS, JS, images) from embedded assets
 	sub, err := iofs.Sub(embeddedAssets, "static")
